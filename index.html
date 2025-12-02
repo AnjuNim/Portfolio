@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anjali Somasiri | Portfolio</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    }
+  </script>
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Heroicons CDN -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-500">
+
+<!-- HEADER / NAVBAR -->
+<header class="fixed w-full bg-white dark:bg-gray-800 shadow-md z-50 transition-colors duration-500">
+  <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+    <div class="text-xl font-bold text-indigo-600 dark:text-indigo-400">Anjali Somasiri</div>
+    <nav class="space-x-6 hidden md:flex">
+      <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">About Me</a>
+      <a href="#education" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Education</a>
+      <a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Skills</a>
+      <a href="#future" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Future Dreams</a>
+      <a href="#experience" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Experience</a>
+    </nav>
+    <div class="flex items-center space-x-4">
+      <!-- Dark/Light toggle -->
+      <button id="themeToggle" class="text-gray-800 dark:text-gray-200 focus:outline-none">
+        <i id="themeIcon" data-feather="sun" class="w-6 h-6"></i>
+      </button>
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <i data-feather="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-md transition-colors duration-500">
+    <a href="#about" class="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-gray-700 transition">About Me</a>
+    <a href="#education" class="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-gray-700 transition">Education</a>
+    <a href="#skills" class="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-gray-700 transition">Skills</a>
+    <a href="#future" class="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-gray-700 transition">Future Dreams</a>
+    <a href="#experience" class="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-gray-700 transition">Experience</a>
+  </div>
+</header>
+
+<!-- LANDING SECTION -->
+<section class="min-h-screen flex flex-col md:flex-row items-center justify-center bg-indigo-50 dark:bg-gray-900 px-6 md:px-20 pt-28">
+  <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right">
+    <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">Anjali Somasiri</h1>
+    <p class="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-6">Applied Sciences Undergraduate | Physics & Chemistry | Aspiring Researcher & Sustainability Advocate</p>
+    <a href="#about" class="bg-indigo-600 dark:bg-indigo-500 text-white px-6 py-3 rounded-lg hover:bg-indigo-500 dark:hover:bg-indigo-400 transition">Explore Portfolio</a>
+  </div>
+  <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center" data-aos="fade-left">
+    <img src="profile-photo.jpg" alt="Anjali Somasiri" class="rounded-full w-64 h-64 object-cover shadow-lg border-4 border-indigo-200 dark:border-indigo-400">
+  </div>
+</section>
+
+<!-- ABOUT ME -->
+<section id="about" class="py-20 bg-white dark:bg-gray-800">
+<h2 class="text-4xl font-bold text-center mb-10">About Me</h2>
+<div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto px-6">
+<!-- Left Card -->
+<div class="p-6 rounded-2xl shadow-lg bg-gray-50 dark:bg-gray-700">
+<p class="leading-relaxed text-lg">
+I’m Anjali Nimesha Somasiri, an undergraduate student at Rajarata University of Sri Lanka,
+pursuing a BSc in Applied Science with a specialization in Physics and Chemistry. My academic
+journey blends curiosity-driven learning and hands-on exploration in both theoretical and practical
+aspects of science.
+</p>
+<p class="leading-relaxed text-lg mt-4">
+I am passionate about research, sustainability, and science communication, combining academic
+knowledge with real-world experience—from banking to environmental volunteering.
+</p>
+<p class="leading-relaxed text-lg mt-4">
+This portfolio reflects my journey so far, highlighting projects, experiments, and experiences that
+have shaped me as a student, researcher, and aspiring scientist.
+</p>
+</div>
+
+
+<!-- Right Card -->
+<div class="p-6 rounded-2xl shadow-lg bg-gray-50 dark:bg-gray-700 space-y-4">
+<p><i class="ph ph-user text-blue-500"></i> <strong>Name:</strong> Anjali Nimesha Somasiri</p>
+<p><i class="ph ph-calendar text-blue-500"></i> <strong>Birthday:</strong> 2001</p>
+<p><i class="ph ph-graduation-cap text-blue-500"></i> <strong>Degree:</strong> BSc in Applied Science</p>
+<p><i class="ph ph-flask text-blue-500"></i> <strong>Subjects:</strong> Physics & Chemistry</p>
+<p><i class="ph ph-phone text-blue-500"></i> <strong>Phone:</strong> 07X-XXXXXXX</p>
+<p><i class="ph ph-envelope text-blue-500"></i> <strong>Email:</strong> example@gmail.com</p>
+<p><i class="ph ph-map-pin text-blue-500"></i> <strong>Address:</strong> Sri Lanka</p>
+</div>
+</div>
+</section>
+
+<!-- EDUCATION TIMELINE -->
+<section id="education" class="bg-gray-100 dark:bg-gray-800 py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-12 text-center" data-aos="fade-up">Education</h2>
+    <div class="relative border-l-2 border-indigo-600 dark:border-indigo-400 ml-4">
+      <!-- Timeline Item 1 -->
+      <div class="mb-10 ml-6" data-aos="fade-right">
+        <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-indigo-600 dark:bg-indigo-400 rounded-full">
+          <i data-feather="book" class="w-4 h-4 text-white"></i>
+        </span>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">B.Sc. Applied Sciences – Physics & Chemistry</h3>
+        <p class="text-gray-600 dark:text-gray-300">Rajarata University of Sri Lanka (2019–2025)</p>
+      </div>
+      <!-- Timeline Item 2 -->
+      <div class="mb-10 ml-6" data-aos="fade-left">
+        <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-indigo-600 dark:bg-indigo-400 rounded-full">
+          <i data-feather="book-open" class="w-4 h-4 text-white"></i>
+        </span>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">G.C.E. Advanced Level – Biological Stream</h3>
+        <p class="text-gray-600 dark:text-gray-300">K/ Seethadevi Girls' College (2019) – Index No: BBC</p>
+      </div>
+      <!-- Timeline Item 3 -->
+      <div class="mb-10 ml-6" data-aos="fade-right">
+        <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-indigo-600 dark:bg-indigo-400 rounded-full">
+          <i data-feather="award" class="w-4 h-4 text-white"></i>
+        </span>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">G.C.E. Ordinary Level</h3>
+        <p class="text-gray-600 dark:text-gray-300">K/ Seethadevi Girls' College (2014) – Index No: A7, B2</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="max-w-6xl mx-auto py-20 px-6" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-8">Skills</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:scale-105 transform transition">
+      <div class="flex items-center mb-4"><i data-feather="cpu" class="w-6 h-6 text-indigo-600 dark:text-indigo-400 mr-2"></i><h3 class="font-semibold text-xl text-gray-800 dark:text-gray-100">Technical Skills</h3></div>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+        <li>Physics & Chemistry lab techniques</li>
+        <li>Experimental design & data analysis</li>
+        <li>Spectroscopy, titration, microscopy</li>
+        <li>Oceanography & environmental monitoring basics</li>
+      </ul>
+    </div>
+    <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:scale-105 transform transition">
+      <div class="flex items-center mb-4"><i data-feather="monitor" class="w-6 h-6 text-indigo-600 dark:text-indigo-400 mr-2"></i><h3 class="font-semibold text-xl text-gray-800 dark:text-gray-100">Digital Skills</h3></div>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+        <li>MS Office Suite</li>
+        <li>Data visualization & graphing</li>
+        <li>Scientific report writing</li>
+      </ul>
+    </div>
+    <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:scale-105 transform transition">
+      <div class="flex items-center mb-4"><i data-feather="users" class="w-6 h-6 text-indigo-600 dark:text-indigo-400 mr-2"></i><h3 class="font-semibold text-xl text-gray-800 dark:text-gray-100">Interpersonal Skills</h3></div>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+        <li>Communication & teamwork</li>
+        <li>Leadership & project coordination</li>
+        <li>Problem solving & critical thinking</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FUTURE DREAMS -->
+<section id="future" class="bg-indigo-50 dark:bg-gray-900 py-20 px-6" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-8 text-center">Future Dreams & Career Goals</h2>
+
+    <!-- Short-Term Goals -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-4">🚀 Short-Term Goals (1–3 Years)</h3>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+        <li><strong>Finish my BSc with excellence</strong>
+          <ul class="list-disc list-inside ml-6 space-y-1">
+            <li>Maintain high grades in Physics & Chemistry</li>
+            <li>Strengthen analytical & lab skills</li>
+            <li>Engage actively in lectures, labs & tutorials</li>
+            <li>Seek guidance from lecturers & mentors</li>
+            <li>Allocate time for self-study and reading</li>
+          </ul>
+        </li>
+        <li><strong>Grow as a young researcher</strong>
+          <ul class="list-disc list-inside ml-6 space-y-1">
+            <li>Learn experiment design & control methods</li>
+            <li>Improve data analysis & scientific reporting</li>
+            <li>Enhance presentation & communication skills</li>
+            <li>Participate in research groups or mini-projects</li>
+          </ul>
+        </li>
+        <li><strong>Explore real-world science</strong>
+          <ul class="list-disc list-inside ml-6 space-y-1">
+            <li>Internships in geophysics, oceanography, or labs</li>
+            <li>Laboratory or environmental field training</li>
+            <li>Volunteer in sustainability or science programs</li>
+            <li>Observe professional problem-solving approaches</li>
+          </ul>
+        </li>
+        <li><strong>Share my first scientific contribution</strong>
+          <ul class="list-disc list-inside ml-6 space-y-1">
+            <li>Research poster or university seminar presentation</li>
+            <li>Submit work to student research conferences</li>
+            <li>Draft first research manuscript</li>
+            <li>Collaborate with peers on group investigations</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Long-Term Goals -->
+    <div>
+      <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-4">🌍 Long-Term Goals (5–10 Years)</h3>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+        <li><strong>Become a scientist in applied physics, geoscience, or environmental research</strong>
+          <ul class="list-disc list-inside ml-6 space-y-1">
+            <li>Study Earth's structure, seismic activity, and geophysical processes</li>
+            <li>Explore ocean currents, marine ecosystems, and climate interactions</li>
+            <li>Develop sustainable solutions for environmental conservation</li>
+            <li>Use technology for Earth and ocean data collection</li>
+          </ul>
+        </li>
+        <li><strong>Pursue a Master’s or PhD abroad</strong>
+          <ul class="list-disc list-inside ml-6 space-y-1">
+            <li>Study at globally recognized research universities</li>
+            <li>Join research groups in oceanography or geophysics</li>
+            <li>Engage in advanced lab & field research</li>
+            <li>Publish papers in high-quality journals</li>
+            <li>Build a global network of mentors and collaborators</li>
+          </ul>
+        </li>
+        <li><strong>Join marine or environmental research institutes</strong>
+          <ul class="list-disc list-inside ml-6 space-y-1">
+            <li>Work in oceanographic labs, research vessels, or climate centers</li>
+            <li>Contribute to governmental or NGO environmental projects</li>
+            <li>Analyze environmental data and support sustainability projects</li>
+          </ul>
+        </li>
+        <li><strong>Lead sustainability and science-education initiatives</strong>
+          <ul class="list-disc list-inside ml-6 space-y-1">
+            <li>Mentor school students and inspire STEM interest</li>
+            <li>Develop community-based environmental programs</li>
+            <li>Collaborate with organizations to promote science literacy</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Vision Statement -->
+    <div class="mt-8 bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md" data-aos="fade-up">
+      <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">✨ Personal Vision Statement</h3>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+        “I dream of becoming a scientist who blends curiosity with purpose—studying our planet not just to understand it, but to protect it. I see myself contributing to research that supports a sustainable, resilient future while inspiring others to discover the beauty of science. With passion as my guide and learning as my path, I am committed to creating impact that reaches far beyond myself.”
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="max-w-6xl mx-auto py-20 px-6" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-8">Experience / Work History</h2>
+  <div class="space-y-8">
+    <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:scale-105 transform transition">
+      <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100"><i data-feather="briefcase" class="w-5 h-5 inline mr-2 text-indigo-600 dark:text-indigo-400"></i>Personal Banking Assistant</h3>
+      <p class="text-gray-600 dark:text-gray-300">Bank of Ceylon – Danture Branch | March 2020 – September 2020</p>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2 space-y-1">
+        <li>Gained hands-on experience in account handling and customer service</li>
+        <li>Learned digital banking platforms and financial system operations</li>
+        <li>Enhanced communication, organization, and problem-solving skills</li>
+      </ul>
+    </div>
+    <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:scale-105 transform transition">
+      <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100"><i data-feather="heart" class="w-5 h-5 inline mr-2 text-indigo-600 dark:text-indigo-400"></i>Volunteer – St. John Ambulance</h3>
+      <p class="text-gray-600 dark:text-gray-300">Since 2011</p>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2 space-y-1">
+        <li>Provided first aid at events and community programs</li>
+        <li>Developed teamwork, emergency response, and communication skills</li>
+        <li>Strengthened commitment to social responsibility</li>
+      </ul>
+    </div>
+    <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:scale-105 transform transition">
+      <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100"><i data-feather="coffee" class="w-5 h-5 inline mr-2 text-indigo-600 dark:text-indigo-400"></i>Volunteer – ZeroPlastic Community</h3>
+      <p class="text-gray-600 dark:text-gray-300">Since 2020</p>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2 space-y-1">
+        <li>Participated in eco-friendly initiatives and cleanup drives</li>
+        <li>Promoted environmental awareness and sustainability</li>
+        <li>Built teamwork, project coordination, and public outreach skills</li>
+      </ul>
+    </div>
+    <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:scale-105 transform transition">
+      <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100"><i data-feather="star" class="w-5 h-5 inline mr-2 text-indigo-600 dark:text-indigo-400"></i>Society Member – Society of Physics & Astronomy</h3>
+      <p class="text-gray-600 dark:text-gray-300">Since 2020</p>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2 space-y-1">
+        <li>Participated in physics workshops, seminars, and academic events</li>
+        <li>Enhanced practical knowledge and collaboration skills</li>
+        <li>Strengthened understanding of core scientific concepts</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-800 dark:bg-gray-900 text-gray-200 py-6 mt-20">
+  <div class="max-w-6xl mx-auto text-center">
+    <p>&copy; 2025 Anjali Somasiri. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 1000 });
+
+  // Feather icons replace
+  feather.replace();
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+  // Dark/Light mode toggle
+  // const themeToggle = document.getElementById('themeToggle');
+  // themeToggle.addEventListener('click', () => {
+  //   document.documentElement.classList.toggle('dark');
+  //   const icon = themeToggle.querySelector('i');
+  //   icon.setAttribute('data-feather', document.documentElement.classList.contains('dark') ? 'moon' : 'sun');
+  //   feather.replace();
+  // });
+</script>
+<script>
+  feather.replace(); // initial icons
+
+  const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
+
+  // Load saved theme on page load
+  if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark");
+      themeIcon.setAttribute("data-feather", "moon");
+  } else {
+      document.documentElement.classList.remove("dark");
+      themeIcon.setAttribute("data-feather", "sun");
+  }
+
+  feather.replace(); // refresh icons
+
+  // Toggle theme on click
+  themeToggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+
+      if (document.documentElement.classList.contains("dark")) {
+          themeIcon.setAttribute("data-feather", "moon");
+          localStorage.setItem("theme", "dark");
+      } else {
+          themeIcon.setAttribute("data-feather", "sun");
+          localStorage.setItem("theme", "light");
+      }
+
+      feather.replace(); // refresh icon change
+  });
+</script>
+
+</body>
+</html>
