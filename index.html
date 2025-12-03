@@ -30,6 +30,20 @@
     html {
       scroll-behavior: smooth;
     }
+    /* Prevent horizontal overflow on small screens and enforce sensible defaults */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
   </style>
 </head>
 
