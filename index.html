@@ -382,65 +382,7 @@
 
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 1000 });
-
-    // Feather icons replace
-    feather.replace();
-
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
-
-  </script>
-  <script>
-    // Fade out + remove skeleton overlay once all resources are loaded
-    window.addEventListener('load', function() {
-      const s = document.getElementById('skeleton');
-      if (!s) return;
-      setTimeout(function() {
-        s.style.transition = 'opacity 300ms ease';
-        s.style.opacity = '0';
-        setTimeout(function() { s.remove(); }, 350);
-      }, 250);
-    });
-  </script>
-    <script>
-      (function(){
-        function createSkeleton(){
-          // Create or return a compact spinner overlay used for nav clicks.
-          const existing = document.getElementById('skeleton-spinner');
-          if(existing) return existing;
-
-          const spinner = document.createElement('div');
-          spinner.id = 'skeleton-spinner';
-          spinner.className = 'fixed inset-0 flex items-center justify-center bg-white dark:bg-gray-900';
-          spinner.style.zIndex = '99999';
-
-          spinner.innerHTML = '\n+          <div class="flex flex-col items-center gap-4">\n+            <div class="w-16 h-16 border-4 border-gray-200 dark:border-gray-700 border-t-indigo-600 rounded-full animate-spin"></div>\n+            <div class="text-sm text-gray-700 dark:text-gray-300">Loading…</div>\n+          </div>\n+';
-
-          document.body.appendChild(spinner);
-          return spinner;
-        }
-
-        function handleNavClick(e){
-          const a = e.currentTarget;
-          const href = a.getAttribute('href');
-          if(!href || href.startsWith('#')) return; // ignore in-page anchors
-          e.preventDefault();
-          createSkeleton();
-          // allow the browser a tick to render the skeleton before navigation
-           requestAnimationFrame(function(){ window.location.href = href; });
-        }
-
-        document.addEventListener('DOMContentLoaded', function(){
-          const links = document.querySelectorAll('nav a, #mobileMenu a');
-          links.forEach(l => l.addEventListener('click', handleNavClick));
-        });
-      })();
-    </script>
+  <script src="scripts/main.js"></script>
   <script>
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
@@ -460,38 +402,7 @@
       });
     });
   </script>
-  <script>
-    feather.replace(); // initial icons
-
-    const themeToggle = document.getElementById("themeToggle");
-    const themeIcon = document.getElementById("themeIcon");
-
-    // Load saved theme on page load
-    if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.classList.add("dark");
-      themeIcon.setAttribute("data-feather", "moon");
-    } else {
-      document.documentElement.classList.remove("dark");
-      themeIcon.setAttribute("data-feather", "sun");
-    }
-
-    feather.replace(); // refresh icons
-
-    // Toggle theme on click
-    themeToggle.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-
-      if (document.documentElement.classList.contains("dark")) {
-        themeIcon.setAttribute("data-feather", "moon");
-        localStorage.setItem("theme", "dark");
-      } else {
-        themeIcon.setAttribute("data-feather", "sun");
-        localStorage.setItem("theme", "light");
-      }
-
-      feather.replace(); // refresh icon change
-    });
-  </script>
+  <!-- theme toggle handled centrally in scripts/main.js -->
 
   <!-- Updated Timeline Education Styling (Flowbite + Tailwind) -->
   <style>
