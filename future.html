@@ -13,19 +13,7 @@
       darkMode: "class",
     }
   </script>
-</script>
-  <script>
-    // Fade out + remove skeleton overlay once all resources are loaded
-    window.addEventListener('load', function() {
-      const s = document.getElementById('skeleton');
-      if (!s) return;
-      setTimeout(function() {
-        s.style.transition = 'opacity 300ms ease';
-        s.style.opacity = '0';
-        setTimeout(function() { s.remove(); }, 350);
-      }, 250);
-    });
-  </script>
+
   <!-- Flowbite CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
@@ -34,8 +22,6 @@
 
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="scripts/main.js"></script>
 
   <style>
     html { scroll-behavior: smooth; }
@@ -46,30 +32,6 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-500">
-  <!-- Skeleton loader shown while page assets initialize -->
-  <div id="skeleton" class="fixed inset-0 animate-pulse flex flex-col p-6 gap-6 bg-white dark:bg-gray-900" style="z-index:9999;">
-    <div class="h-16 w-full rounded-md "></div>
-    <div class="flex-1 space-y-4 overflow-hidden">
-      <div class="h-4 w-3/4 rounded-md bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      <div class="h-4 w-full rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      </div>
-      <div class="h-4 w-full rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      </div>
-      <div class="h-4 w-full rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      </div>
-    </div>
-  </div>
 
   <!-- HEADER / NAVBAR -->
   <header class="fixed w-full bg-white dark:bg-gray-800 shadow-lg z-50 transition-colors duration-500">
@@ -129,7 +91,7 @@
     <!-- Row 1 -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 items-center mb-10">
       <div class="md:col-span-1 md:order-1 ">
-        <img src="images/short_term_goals_1.avif" class="w-full rounded-xl shadow-lg object-cover h-48" />
+        <img src="images/short_term_goals_1.jpg" class="w-full rounded-xl shadow-lg object-cover h-48" />
       </div>
       <div
         class="md:col-span-3 md:order-2 bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg dark:hover:shadow-indigo-900/40  hover:shadow-2xl transition transform hover:-translate-y-1"
@@ -156,7 +118,7 @@
         class="md:col-span-3 md:order-1 bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg dark:hover:shadow-indigo-900/40  hover:shadow-2xl transition transform hover:-translate-y-1"
         data-aos="fade-up">
         <h4 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Grow as a young researcher</h4>
-        <p class="text-gray-700 dark:text-gray-300 mb-5">I aim to complete my Bachelor’s degree with strong academic performance that reflects both dedication and curiosity toward science. My priority is to build a solid foundation in Physics, Chemistry, and Earth Sciences, ensuring I am fully prepared for advanced research pathways.</p>
+        <p class="text-gray-700 dark:text-gray-300 mb-5">My focus is on progressing my ongoing research toward publication while expanding my involvement in scientific inquiry and collaboration. I am committed to seeking new research opportunities within my field, exploring emerging ideas, and expanding my experience as a researcher.</p>
         <p class="text-gray-700 dark:text-gray-300 mb-3">How I plan to achieve this:</p>
         <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
           <li>Learn experiment design</li>
@@ -176,7 +138,7 @@
         class="md:col-span-3 md:order-2 bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg dark:hover:shadow-indigo-900/40  hover:shadow-2xl transition transform hover:-translate-y-1"
         data-aos="fade-up">
         <h4 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Explore real-world science</h4>
-        <p class="text-gray-700 dark:text-gray-300 mb-5">I aim to complete my Bachelor’s degree with strong academic performance that reflects both dedication and curiosity toward science. My priority is to build a solid foundation in Physics, Chemistry, and Earth Sciences, ensuring I am fully prepared for advanced research pathways.</p>
+        <p class="text-gray-700 dark:text-gray-300 mb-5">I am developing my understanding of science by engaging directly with real environments, professional practices, and practical challenges. By stepping beyond the classroom and observing how scientific work is carried out in the field and in laboratories, I hope to connect theoretical knowledge with real-world applications and deepen my perspective as a future researcher.</p>
         <p class="text-gray-700 dark:text-gray-300 mb-3">How I plan to achieve this:</p>
         <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
           <li>Internships in labs or geoscience fields</li>
@@ -196,7 +158,7 @@
         class="md:col-span-3 md:order-1 bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg dark:hover:shadow-indigo-900/40  hover:shadow-2xl transition transform hover:-translate-y-1"
         data-aos="fade-up">
         <h4 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Share my first scientific contribution</h4>
-        <p class="text-gray-700 dark:text-gray-300 mb-5">I aim to complete my Bachelor’s degree with strong academic performance that reflects both dedication and curiosity toward science. My priority is to build a solid foundation in Physics, Chemistry, and Earth Sciences, ensuring I am fully prepared for advanced research pathways.</p>
+        <p class="text-gray-700 dark:text-gray-300 mb-5">Driven to advance my scientific journey, I aim to contribute original research to the broader community. By actively engaging with mentors and peers, refining my findings, and presenting my work, this process will not only allow me to share what I have learned but also help me grow as a researcher by experiencing the full cycle of scientific inquiry and communication.</p>
         <p class="text-gray-700 dark:text-gray-300 mb-3">How I plan to achieve this:</p>
         <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
           <li>Present a research poster</li>
@@ -313,7 +275,27 @@
     </div>
   </footer>
 
-
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 1000 });
+    feather.replace();
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+  <script>
+    feather.replace();
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+    if (localStorage.getItem("theme") === "dark") { document.documentElement.classList.add("dark"); themeIcon.setAttribute("data-feather", "moon"); } else { document.documentElement.classList.remove("dark"); themeIcon.setAttribute("data-feather", "sun"); }
+    feather.replace();
+    themeToggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      if (document.documentElement.classList.contains("dark")) { themeIcon.setAttribute("data-feather", "moon"); localStorage.setItem("theme", "dark"); } else { themeIcon.setAttribute("data-feather", "sun"); localStorage.setItem("theme", "light"); }
+      feather.replace();
+    });
+  </script>
 
 </body>
 

@@ -48,30 +48,6 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-500">
-  <!-- Skeleton loader shown while page assets initialize -->
-  <div id="skeleton" class="fixed inset-0 animate-pulse flex flex-col p-6 gap-6 bg-white dark:bg-gray-900" style="z-index:9999;">
-    <div class="h-16 w-full rounded-md"></div>
-    <div class="flex-1 space-y-4 overflow-hidden">
-      <div class="h-4 w-3/4 rounded-md bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      <div class="h-4 w-full rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      </div>
-      <div class="h-4 w-full rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      </div>
-      <div class="h-4 w-full rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-        <div class="h-4 rounded-xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      </div>
-    </div>
-  </div>
 
   <!-- HEADER / NAVBAR -->
   <header class="fixed w-full bg-white dark:bg-gray-800 shadow-lg z-50 transition-colors duration-500">
@@ -125,7 +101,7 @@
         <div
           class="absolute inset-0 bg-indigo-300 dark:bg-indigo-700 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition z-0">
         </div>
-        <img src="images/profile_photo.jpeg" alt="Anjali Somasiri"
+        <img src="images/profile_photo2.jpg" alt="Anjali Somasiri"
           class="rounded-full w-72 h-72 object-cover shadow-2xl border-4 border-indigo-200 dark:border-indigo-500 relative z-10">
       </div>
     </div>
@@ -213,17 +189,17 @@
 
   <div class="flex items-center gap-3">
     <i data-feather="calendar" class="text-indigo-600 dark:text-indigo-400"></i>
-    <p><span class="font-semibold">Age:</span> 23</p>
+    <p><span class="font-semibold">Age:</span> 27</p>
   </div>
 
   <div class="flex items-center gap-3">
     <i data-feather="phone" class="text-indigo-600 dark:text-indigo-400"></i>
-    <p>+94 XX XXX XXXX</p>
+    <p>+94 71 532 3275</p>
   </div>
 
-  <div class="flex items-center gap-3">
+  <div class="flex items-center gap-3 sm:col-span-2">
     <i data-feather="mail" class="text-indigo-600 dark:text-indigo-400"></i>
-    <p>anjali@example.com</p>
+    <p>anjalinimsomasiri@gmail.com</p>
   </div>
 
   <div class="flex items-center gap-3 sm:col-span-2">
@@ -233,7 +209,7 @@
 
   <div class="flex items-center gap-3 ">
     <i data-feather="map-pin" class="text-indigo-600 dark:text-indigo-400"></i>
-    <p>Dambulla, Sri Lanka</p>
+    <p>Danthure, Sri Lanka</p>
   </div>
 
 
@@ -382,7 +358,19 @@
 
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="scripts/main.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 1000 });
+
+    // Feather icons replace
+    feather.replace();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+
+  </script>
   <script>
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
@@ -402,7 +390,38 @@
       });
     });
   </script>
-  <!-- theme toggle handled centrally in scripts/main.js -->
+  <script>
+    feather.replace(); // initial icons
+
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    // Load saved theme on page load
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark");
+      themeIcon.setAttribute("data-feather", "moon");
+    } else {
+      document.documentElement.classList.remove("dark");
+      themeIcon.setAttribute("data-feather", "sun");
+    }
+
+    feather.replace(); // refresh icons
+
+    // Toggle theme on click
+    themeToggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+
+      if (document.documentElement.classList.contains("dark")) {
+        themeIcon.setAttribute("data-feather", "moon");
+        localStorage.setItem("theme", "dark");
+      } else {
+        themeIcon.setAttribute("data-feather", "sun");
+        localStorage.setItem("theme", "light");
+      }
+
+      feather.replace(); // refresh icon change
+    });
+  </script>
 
   <!-- Updated Timeline Education Styling (Flowbite + Tailwind) -->
   <style>
