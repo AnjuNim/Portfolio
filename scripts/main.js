@@ -96,6 +96,50 @@
     const links = document.querySelectorAll('nav a, #mobileMenu a');
     links.forEach(l => l.addEventListener('click', handleNavClick));
   }
+// Navbar scroll effect + typing animation
+function initTyping() {
+  const typingText = document.getElementById('typingText');
+  // Typing animation
+  if (typingText) {
+    const roles = [
+      'Applied Sciences Undergraduate',
+      'Physics & Chemistry',
+      'Aspiring Researcher',
+      'Sustainability Advocate'
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 500;
+
+    function type() {
+      const currentRole = roles[roleIndex];
+
+      if (isDeleting) {
+        typingText.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 50;
+      } else {
+        typingText.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 50;
+      }
+
+      if (!isDeleting && charIndex === currentRole.length) {
+        typingSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typingSpeed = 5;
+      }
+
+      setTimeout(type, typingSpeed);
+    }
+
+    type();
+  }
+}
 
   // Run safe initializers when DOM is ready
   document.addEventListener('DOMContentLoaded', function(){
@@ -104,6 +148,7 @@
     initThemeToggle();
     attachNavHandlers();
     initAOS();
+    initTyping();
   });
 
   // Run any window-load behaviors
